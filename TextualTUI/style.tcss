@@ -1,0 +1,26 @@
+ProducerContainer {
+    layout: vertical;
+    min-width: 50;
+    margin: 1;
+    padding: 1;
+    height:5;
+    background: $boost;
+}
+
+#start {
+    dock:left;
+}
+#stop {
+    dock:left;
+    display:none;
+}
+#reset {
+    dock:right;
+}
+
+.started #start{
+    display:none;
+}
+.started #stop{
+    display:block;
+}
