@@ -16,7 +16,8 @@
     "@vitejs/plugin-react": "^4.3.2",
     "arwes": "^1.0.0-next.24091701",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "socket.io-client": "^4.8.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",

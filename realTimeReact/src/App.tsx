@@ -1,12 +1,48 @@
 import "./App.css";
+import { useEffect,useState } from "react";
 import { Puffs } from "@arwes/react";
 import { Animator } from '@arwes/react-animator'
 import { GridLines, Dots, MovingLines } from '@arwes/react-bgs'
+import { io } from "socket.io-client";
 import Card from "./components/Card";
 import ConnectionDisplay from "./components/ConnectionDisplay";
 
-function App() {
+const socket = io("http://localhost:3001");
 
+
+
+
+
+function App() {
+  const [isConnected, setIsConnected] = useState(false);
+  const [message, setMessage] = useState([]);
+  
+  
+  useEffect(() => {
+  // Establish socket connection
+  socket.on("connect", () => {
+    setIsConnected(true);
+    console.log("Connected to socket server");
+  });
+
+  socket.on("disconnect", () => {
+    setIsConnected(false);
+    console.log("Disconnected from socket server");
+  });
+
+  // Listen for messages from the server
+  socket.on("message", (message) => {
+    console.log("Message received: ", message);
+    setMessage(message)
+  });
+
+  // Cleanup on component unmount
+  return () => {
+    socket.off("connect");
+    socket.off("disconnect");
+    socket.off("message");
+  };
+}, []);
 
   return (
     <>
@@ -34,12 +70,9 @@ function App() {
           radiusOffset={[4, 20]}
         />
         <div className="flex flex-col gap-3 justify-center items-center" style={{ position: "relative" }}>
-          <Card value={0}/>
-          <ConnectionDisplay isConnected={false}/>
-          
+          <Card value={+message}/>
+          <ConnectionDisplay isConnected={isConnected}/>
         </div>
-
-
       </div>
     </Animator>
     </>

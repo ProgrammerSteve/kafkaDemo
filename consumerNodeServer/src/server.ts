@@ -13,7 +13,7 @@ const kafka = new Kafka({
 const consumer = kafka.consumer({ groupId: "my-group" });
 const runKafkaConsumer = async () => {
     await consumer.connect();
-    await consumer.subscribe({ topic: "your-topic-name", fromBeginning: false });
+    await consumer.subscribe({ topic: "messages", fromBeginning: false });
     await consumer.run({
         eachMessage: async ({ topic, partition, message }) => {
         const receivedMessage = message.value?.toString();
