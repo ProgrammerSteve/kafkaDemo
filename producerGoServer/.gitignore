@@ -1,3 +1,24 @@
-node_modules
 .env
 .env.*
+
+# Go binaries
+*.exe
+*.exe~
+*.out
+main
+
+# Vendor directory (if using Go modules)
+vendor/
+
+# Temporary files
+*.tmp
+*.temp
+
+# IDE/editor specific files
+.idea/
+*.swp
+*.swo
+*.DS_Store
+
+# Coverage files
+*.cov
