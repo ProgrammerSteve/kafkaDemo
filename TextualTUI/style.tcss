@@ -8,6 +8,11 @@ ProducerContainer {
     background: $boost;
 }
 
+#producer-number-input-1 {
+    height:4;
+    text-style: bold;
+}
+
 #send {
     width:1fr;
     content-align:center middle;

@@ -28,7 +28,7 @@ class ProducerApp(App):
     def compose(self):
         """What widgets is this app composed of?"""
         self.produced_value = 0.0  # Initialize produced_value in the app
-        yield Header(show_clock=True)
+        # yield Header(show_clock=True)
         yield Footer()
         with ScrollableContainer(id= "numberinputs"):
             yield NumberInput()
