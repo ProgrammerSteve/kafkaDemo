@@ -44,15 +44,14 @@
 - https://textual.textualize.io/
 - sends information to the go backend to be relayed to kafka
 
-![Python Textual Kafka App](images/pythonTextualKafkaApp.png)
-
+![Python Textual Kafka App](https://github.com/ProgrammerSteve/kafkaDemo/blob/main/images/pythonTextualKafkaApp.png)
 
 ## React Real-time Display
 - Uses socket.io to get feedback from node server
 - The style was created using the ARWES theme library
 - https://next.arwes.dev/docs/develop/react
 
-![React Real-Time Kafka App](images/reactRealTimeKafkaApp.png)
+![React Real-Time Kafka App](https://github.com/ProgrammerSteve/kafkaDemo/blob/main/images/reactRealTimeKafkaApp.png)
 
 
 ## Consumer Node Server
