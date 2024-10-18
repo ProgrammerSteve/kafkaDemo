@@ -44,7 +44,7 @@
 - https://textual.textualize.io/
 - sends information to the go backend to be relayed to kafka
 
-![Alt text](images/pythonTextualKafkaApp.png)
+![Python Textual Kafka App](images/pythonTextualKafkaApp.png)
 
 
 ## React Real-time Display
@@ -52,7 +52,7 @@
 - The style was created using the ARWES theme library
 - https://next.arwes.dev/docs/develop/react
 
-![Alt text](images/reactRealTimeKafkaApp.png)
+![React Real-Time Kafka App](images/reactRealTimeKafkaApp.png)
 
 
 ## Consumer Node Server
