@@ -36,3 +36,31 @@
 
 ### Listen for Messages on Consumer, list all previous
 `kafka-console-consumer.sh --bootstrap-server kafka:9092 --topic messages --from-beginning`
+
+
+## Textual TUI
+- A python application made with the textual framework
+- Text User Interface (TUI)
+- https://textual.textualize.io/
+- sends information to the go backend to be relayed to kafka
+
+![Alt text](images/pythonTextualKafkaApp.png)
+
+
+## React Real-time Display
+- Uses socket.io to get feedback from node server
+- The style was created using the ARWES theme library
+- https://next.arwes.dev/docs/develop/react
+
+![Alt text](images/reactRealTimeKafkaApp.png)
+
+
+## Consumer Node Server
+- connects to kafka on localhost:9091 on the 'messages' topic
+- uses socket.io to communicate with the react frontend
+- acts as a consumer for kafka
+
+## Producer Go Server
+- uses the gin framework to set up endpoints
+- connect to kafka on localhost:9091 on the 'messages' topic
+- acts as a producer for kafka
